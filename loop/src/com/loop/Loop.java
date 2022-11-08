@@ -4,9 +4,11 @@ public class Loop {
 
 		
 		public static void main(String args[]) {
+			
 			System.out.println("WHILE LOOP PROGRAMS");
 			
 			Loop loop=new Loop();
+			
 			//loop.printOne();
 			//loop.print12345();
 			//loop.multiples3AND5();/
@@ -14,7 +16,7 @@ public class Loop {
 			//loop.sum_of_first_n_numbers();
 			//loop.find_divisors(100);  //divide of 100
 			//loop.count_of_divisors(100);  //count of 100/
-			//loop.primeOrNot(14);
+			//loop.primeOrNot(14);   
 			//loop.reverseOrder(5674);
 			//loop. noOfReverseNumber();
 			//loop.sumOfReverseNumber();
@@ -23,14 +25,92 @@ public class Loop {
 			//loop.commonDivisor();
 			//loop.greatestCommonDivisor();
 			//loop.reverseInteger();
-			// loop.palindrome();
-			// loop.factorial(5);
+			//loop.palindrome();
+			//loop.factorial(5);
 			//loop.allFactorials();
 			//loop.multiple1To10();//10/
-			loop.multiple11();
+			//loop.multiple11();
+			//loop.powerOfCube();
+			//loop.powerOfSquare();
+			//loop.amstrongNo();
+			//loop.neonNumber();
+			loop.strongNo();
 			
 			}
+			
 
+			private void strongNo() {
+			int no=145;
+			int original=no;
+			int fact=0;
+			while(0<no) {
+				int rem=no%10;
+				fact=fact+rem;
+				//fact=fact+factorial(rem);//call factorial method
+				no=no/10;
+			}
+			if(original==no) {
+				System.out.println(original+ " Strong No");
+			}
+			else {
+				System.out.println(original+ " Not Strong No");
+			}
+		}
+
+
+			private void neonNumber() {
+					int no=9;
+					int square=no*no;
+					int sum=0;
+					while(0<square) {
+						int rem=square%10;
+						sum=sum+rem;
+						square=square/10;
+					}
+					if(no==sum) {
+						System.out.println(no+ " Neon Number");
+					}
+					else {
+						System.out.println(no+ "Not Neon Number");
+					}
+		}
+
+			private void amstrongNo() {
+				int no=153;
+				int original=no;
+				int sum=0;
+				while(0<no) {
+					int rem=no%10;
+					sum=sum+(rem*rem*rem);
+					no=no/10;
+				}
+				if(original==0) {
+					System.out.println(original+" Amstrong No");
+				}
+				else {
+					System.out.println(original+" Not Amstrong No");
+				}
+		}
+
+			private void powerOfSquare() {
+			    int start=1;
+			    int end=10;
+			    while(start<=end){
+			    	int result=start*start;
+			    	System.out.println(result + " ");
+			    	start=start+1;
+			    }
+		}
+
+			private void powerOfCube() {
+                 int no=1;
+                 int end=4;
+                 while(no<=end) {
+                	 int sum=no*no*no;
+                	 System.out.println(sum);
+                	 no=no+1;
+                 }
+		}
 			private void multiple11() {
 				// TODO Auto-generated method stub
 				int no=1;
@@ -63,7 +143,7 @@ public class Loop {
 				}		
 		}
 
-			private void factorial(int fact) {
+			private void factorial(int fact) {    //int method -->return declatred
 				//int fact=10;
 				int count=1;
 				while(0<fact) {
@@ -185,7 +265,7 @@ public class Loop {
 			System.out.println();
 		}
 				private void primeOrNot(int no) {
-					
+		    
 			 int div=2;
 			 int count=0;
 			 while(div<no) {
