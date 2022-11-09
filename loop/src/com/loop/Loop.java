@@ -2,10 +2,9 @@ package com.loop;
 
 public class Loop {
 
-		
 		public static void main(String args[]) {
 			
-			System.out.println("WHILE LOOP PROGRAMS");
+			//System.out.println("WHILE LOOP PROGRAMS");
 			
 			Loop loop=new Loop();
 			
@@ -34,10 +33,90 @@ public class Loop {
 			//loop.powerOfSquare();
 			//loop.amstrongNo();
 			//loop.neonNumber();
-			loop.strongNo();
+			//loop.strongNo();
+			//loop.find_First_N_PrimeNo();
+			//loop.findSquareRoot();
+			//loop.smallestDivisor();
+		   	//loop.greatestDivisor();
+			loop.samePowerOfNumber();
+			
 			
 			}
 			
+			private void samePowerOfNumber() {
+					int no=1;
+					while(no<5) {
+						int count=0;
+						int result=5;
+						while(count<no) {
+							result=result*no;
+							count=count+1;
+						}
+						System.out.println(result);
+						no=no+1;
+					}
+		}
+
+			private void greatestDivisor() {
+                    int no=49;
+                    int div=no/2;
+                    while(div>=2) {
+                    	if(no%div==0) {
+                    		System.out.println(div);
+                    		break;
+                    	}
+                    	div=div+1;
+                    }
+                 
+		}
+
+			private void smallestDivisor() {
+						int no=49;
+						int div=2;
+						while(div<=no) {
+							if(no/div==div) {
+								System.out.println(div);
+								break;
+							}
+							div=div+1;
+						}
+		}
+
+			private void findSquareRoot() {
+					int no=49;
+					int div=2;
+					while(div<=no) {                //while(div<=number/2)s
+						if(no/div==div) {
+							System.out.println(div);
+						}
+						div=div+1;
+					}
+						
+		}
+
+			private void find_First_N_PrimeNo() {
+			int no=2;
+			int primecount=0;
+			
+			while(primecount < 10) {
+				int div=2;
+				int count=0;
+				
+				while(div<no) {
+					if(no % div==0) {
+						count=count+1;
+						break;
+					}
+					div=div+1;
+				}
+				if(count==0) {
+					System.out.println(div+ " ");
+					primecount=primecount+1;
+				}
+				no=no+1;
+			}
+		}
+
 
 			private void strongNo() {
 			int no=145;
@@ -112,7 +191,7 @@ public class Loop {
                  }
 		}
 			private void multiple11() {
-				// TODO Auto-generated method stub
+
 				int no=1;
 				int multiple=11;
 				while(no<=121) {
