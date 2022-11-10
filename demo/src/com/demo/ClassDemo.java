@@ -1,9 +1,14 @@
 package com.demo;
 
 public class ClassDemo implements InterDemo{
+	ClassDemo(){
+		
+	}
+ClassDemo(int a){
+		
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		InterDemo cd=new ClassDemo();
 		cd.add();
 		cd.multiple();

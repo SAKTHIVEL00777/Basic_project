@@ -1,7 +1,7 @@
 package com.loop;
 
 public class Loop {
-
+	
 		public static void main(String args[]) {
 			
 			//System.out.println("WHILE LOOP PROGRAMS");
@@ -38,11 +38,75 @@ public class Loop {
 			//loop.findSquareRoot();
 			//loop.smallestDivisor();
 		   	//loop.greatestDivisor();
-			loop.samePowerOfNumber();
-			
-			
+			//loop.samePowerOfNumber();
+			//loop.perfectNumber();
+		    // loop.spyNumber();
+			//loop.powerOfNumber(2,5);
+			loop.binaryToDecimal();
 			}
-			
+		
+			private void binaryToDecimal() {
+			        int binary=111;
+			        int power=0;
+			        int base=2;
+			        int result=0;
+			        while(binary>0) {
+			        	int rem=binary%10;
+			        //	rem=rem*powerOfNumber(base,power);
+			        	result=result*rem;
+			        	power=power+1;
+			        	binary=binary/10;
+			        			
+			        }
+			        System.out.println(result);
+		}
+
+			private void powerOfNumber(int base, int power) {
+					int result=1;
+					while(power>0) {
+						result=result*base;
+						power=power-1;
+					}
+					System.out.println(result);
+		}
+
+			private void spyNumber() {
+					int no=132;
+					int copy=no;
+					int sum=0;
+					int multiple=1;
+					while(0<no) {
+						int rem=no%10;
+						sum=sum+rem;
+						multiple=multiple*rem;
+						no=no/10;
+					}
+					if(sum==multiple) {
+						System.out.println(copy+ " Spy Number");
+					}
+					else {
+						System.out.println(copy+ " Not Spy Number");
+					}
+		}
+
+			private void perfectNumber() {
+					int no=6;
+					int div=1;
+					int sum=0;
+					while(div<no) {
+						if(no%div==0) {
+							sum=sum+div;
+						}
+						div=div+1;
+					}
+					if(no==sum) {
+						System.out.println(no+ " Perfect Number");
+					}
+					else {
+						System.err.println(no+ " Not Perfect Number");
+					}
+			}
+
 			private void samePowerOfNumber() {
 					int no=1;
 					while(no<5) {
@@ -71,21 +135,21 @@ public class Loop {
 		}
 
 			private void smallestDivisor() {
-						int no=49;
-						int div=2;
-						while(div<=no) {
-							if(no/div==div) {
-								System.out.println(div);
-								break;
-							}
-							div=div+1;
-						}
+					int no=49;
+					int div=2;
+					while(div<=no) {
+						if(no/div==div) {
+							System.out.println(div);
+							break;
+					}
+				    	div=div+1;
+				}
 		}
 
 			private void findSquareRoot() {
 					int no=49;
 					int div=2;
-					while(div<=no) {                //while(div<=number/2)s
+					while(div<=no) {                //while(div<=number/2)
 						if(no/div==div) {
 							System.out.println(div);
 						}
@@ -95,17 +159,17 @@ public class Loop {
 		}
 
 			private void find_First_N_PrimeNo() {
-			int no=2;
-			int primecount=0;
+					int no=2;
+					int primecount=0;
 			
-			while(primecount < 10) {
-				int div=2;
-				int count=0;
+					while(primecount < 10) {
+						int div=2;
+						int count=0;
 				
-				while(div<no) {
-					if(no % div==0) {
-						count=count+1;
-						break;
+						while(div<no) {
+							if(no % div==0) {
+								count=count+1;
+								break;
 					}
 					div=div+1;
 				}
@@ -119,21 +183,21 @@ public class Loop {
 
 
 			private void strongNo() {
-			int no=145;
-			int original=no;
-			int fact=0;
-			while(0<no) {
-				int rem=no%10;
-				fact=fact+rem;
-				//fact=fact+factorial(rem);//call factorial method
-				no=no/10;
-			}
-			if(original==no) {
-				System.out.println(original+ " Strong No");
-			}
-			else {
-				System.out.println(original+ " Not Strong No");
-			}
+					int no=145;
+					int original=no;
+					int fact=0;
+					while(0<no) {
+						int rem=no%10;
+						fact=fact+rem;
+						//fact=fact+factorial(rem);//call factorial method
+							no=no/10;
+					}
+					if(original==no) {
+						System.out.println(original+ " Strong No");
+					}
+					else {
+						System.out.println(original+ " Not Strong No");
+					}
 		}
 
 
@@ -155,256 +219,256 @@ public class Loop {
 		}
 
 			private void amstrongNo() {
-				int no=153;
-				int original=no;
-				int sum=0;
-				while(0<no) {
-					int rem=no%10;
-					sum=sum+(rem*rem*rem);
-					no=no/10;
-				}
-				if(original==0) {
-					System.out.println(original+" Amstrong No");
-				}
-				else {
-					System.out.println(original+" Not Amstrong No");
-				}
+					int no=153;
+					int original=no;
+					int sum=0;
+					while(0<no) {
+						int rem=no%10;
+						sum=sum+(rem*rem*rem);
+						no=no/10;
+					}
+					if(original==0) {
+						System.out.println(original+" Amstrong No");
+					}
+					else {
+						System.out.println(original+" Not Amstrong No");
+					}
 		}
 
 			private void powerOfSquare() {
-			    int start=1;
-			    int end=10;
-			    while(start<=end){
-			    	int result=start*start;
-			    	System.out.println(result + " ");
-			    	start=start+1;
-			    }
+					int start=1;
+					int end=10;
+					while(start<=end){
+						int result=start*start;
+						System.out.println(result + " ");
+						start=start+1;
+					}
 		}
 
 			private void powerOfCube() {
-                 int no=1;
-                 int end=4;
-                 while(no<=end) {
-                	 int sum=no*no*no;
-                	 System.out.println(sum);
-                	 no=no+1;
-                 }
+                 	int no=1;
+                 	int end=4;
+                 	while(no<=end) {
+                 		int sum=no*no*no;
+                 		System.out.println(sum);
+                 		no=no+1;
+                 	}
 		}
 			private void multiple11() {
 
-				int no=1;
-				int multiple=11;
-				while(no<=121) {
-					System.out.println(no);
-					no=no*multiple;
-				}
+					int no=1;
+					int multiple=11;
+					while(no<=121) {
+						System.out.println(no);
+						no=no*multiple;
+					}
 						
 		}
 
 			private void multiple1To10() {
-				int start=1;
-				int end=10;
-				while(start<=4) {
-					int result=start*end;
-					System.out.println(result);
-					start=start+1;
-					end=end-1;
-				}
+					int start=1;
+					int end=10;
+					while(start<=4) {
+						int result=start*end;
+						System.out.println(result);
+						start=start+1;
+						end=end-1;
+					}
 			
 		}
 
 			private void allFactorials() {
-				int fact=5;
-				while(0<fact) {
-					System.out.println(fact);
-					//System.out.println(factorial(fact));//call factorial method
-					fact=fact-1;
-				}		
+					int fact=5;
+					while(0<fact) {
+						System.out.println(fact);
+						//System.out.println(factorial(fact));//call factorial method
+						fact=fact-1;
+					}		
 		}
 
 			private void factorial(int fact) {    //int method -->return declatred
 				//int fact=10;
-				int count=1;
-				while(0<fact) {
-					count=count*fact;
-					fact=fact-1;
-				}
-				System.out.println(count);
-				//return count;
+					int count=1;
+					while(0<fact) {
+						count=count*fact;
+						fact=fact-1;
+					}
+					System.out.println(count);
+					//return count;
 		}
 
 			private void palindrome() {
-			  int no=7887;
-			  int original=no;
-			  int rev=no;
-			  while(0<no) {
-				  int rem=no%10;
-				  rev=(rev+10)+rem;
-				  no=no/10;
-			  }
-			  if(original==rev) {
-				  System.out.println(original + " Palindrome");
-			  }
-			  else {
-				  System.out.println(original + " Not Palindrome");
-			  }
+					int no=7887;
+					int original=no;
+					int rev=no;
+					while(0<no) {
+						int rem=no%10;
+						rev=(rev+10)+rem;
+						no=no/10;
+					}
+					if(original==rev) {
+						System.out.println(original + " Palindrome");
+					}
+					else {
+						System.out.println(original + " Not Palindrome");
+					}
 		}
 		private void reverseInteger() {
-			int no=78966;
-			int rev=0;
-			while(0<no) {
-				int rem=no%10;
-				rev=(rev*10)+10;
-				no=no/10;
-			}
-			System.out.println(rev);
+				int no=78966;
+				int rev=0;
+				while(0<no) {
+					int rem=no%10;
+					rev=(rev*10)+10;
+					no=no/10;
+				}
+				System.out.println(rev);
 		}
 		private void greatestCommonDivisor() {
-			int no1=100;
-			int no2=120;
-			int div=2;
-			int count=0;
-			int small=no1<no2 ? no1:no2;
-			while(div<=small) {
-				if(no1%div==0 && no2%div==0) {
-					System.out.println(div);
-					count=div;
+				int no1=100;
+				int no2=120;
+				int div=2;
+				int count=0;
+				int small=no1<no2 ? no1:no2;
+				while(div<=small) {
+					if(no1%div==0 && no2%div==0) {
+						System.out.println(div);
+						count=div;
+					}
+					div=div+1;
 				}
-				div=div+1;
-			}
-			  System.out.println(count);
+				  System.out.println(count);
 				
 		}
 		
 		private void commonDivisor() {
-			int no1=100;
-			int no2=120;
-			int div=2;
-			int small=no1<no2 ? no1:no2;
-			while(div<=small) {
-				if(no1%div==0 && no2%div==0) {
-					System.out.println(div);
+				int no1=100;
+				int no2=120;
+				int div=2;
+				int small=no1<no2 ? no1:no2;
+				while(div<=small) {
+					if(no1%div==0 && no2%div==0) {
+						System.out.println(div);
+					}
+						div=div+1;
 				}
-				div=div+1;
-			}
-			System.out.println();
+					System.out.println();
 				
 		}
 		private void sum_of_digits(int box) {
-			int count = 0; 
-			int sum = 0; 
-			while(box>0)
-			{
-			int rem = box%10; 
-			sum = sum + rem;
-			count = count+1; 
-			box = box/10; 	
-			}
-			System.out.println("No  of Digits is "+ count);
-			System.out.println("Sum of digits is "+ sum);
+				int count = 0; 
+				int sum = 0; 
+				while(box>0)
+				{
+					int rem = box%10; 
+					sum = sum + rem;
+					count = count+1; 
+					box = box/10; 	
+				}
+				System.out.println("No  of Digits is "+ count);
+				System.out.println("Sum of digits is "+ sum);
 			
 		}
 		
 				private void count_of_digits(int box) {
-			     int count=0;
-			     while(box>0) {
-			    	 System.out.print(box%10);
-			    	 count=count+1;
-			    	 box=box/10;
-			     }
-			     System.out.println(" No of Digits is:" +count);
+						int count=0;
+						while(box>0) {
+							System.out.print(box%10);
+							count=count+1;
+							box=box/10;
+						}
+						  System.out.println(" No of Digits is:" +count);
 		}
 				private void sumOfReverseNumber() {
 			
-					int no=87975;
-					int sum=0;
-					while(0<no) {
-						int rem=no%10;
-						sum=sum+rem;
-						no=no/10;
-					}
-					System.out.println(sum);
+						int no=87975;
+						int sum=0;
+						while(0<no) {
+							int rem=no%10;
+							sum=sum+rem;
+							no=no/10;
+						}
+						  System.out.println(sum);
 		}
 				private void noOfReverseNumber() {
-			int no=5678892;
-			int count=0;
-			while(0<no) {
-				int rem=no%10;
-				count=count+1;
-				no=no/10;
-			}
-			System.out.println(count);
+						int no=5678892;
+						int count=0;
+						while(0<no) {
+							int rem=no%10;
+							count=count+1;
+							no=no/10;
+						}
+						  System.out.println(count);
 		}
 				private void reverseOrder(int box) {
 			
-			while(box>0) {
-				System.out.print(box%10);
-				box=box/10;
-			}
-			System.out.println();
+						while(box>0) {
+							System.out.print(box%10);
+							box=box/10;
+						}
+						  System.out.println();
 		}
 				private void primeOrNot(int no) {
 		    
-			 int div=2;
-			 int count=0;
-			 while(div<no) {
-				 if(no%div==0) {
-					// System.out.print(div + " ");
-					 count=count+1;
-				 }
-				 div=div+1;
-			 }
-			 if(count==0) {
-				 System.out.println("Prime Number");
-			 }
-			 else 
-			 {
-				 System.out.println("Not Prime Number");
-			 }
+						int div=2;
+						int count=0;
+						while(div<no) {
+							if(no%div==0) {
+								// System.out.print(div + " ");
+								count=count+1;
+							}	
+							div=div+1;
+						}
+						if(count==0) {
+							System.out.println("Prime Number");
+						}
+						else 
+						{
+							System.out.println("Not Prime Number");
+						}
 			 
 		}
 				private void count_of_divisors(int no) {
-					int div=2;
-					int count=0;
-					while(div<no) {
-						if(no%div==0) {
-							System.out.print(div + " ");
-							count=count+1;
+						int div=2;
+						int count=0;
+						while(div<no) {
+							if(no%div==0) {
+								System.out.print(div + " ");
+								count=count+1;
+							}
+							div=div+1;
 						}
-						div=div+1;
-					}
-					System.out.println(count);
+						  System.out.println(count);
 				}
 				private void find_divisors(int no) {
-					int div=2;
-					while(div<no) {
-						if(no%div==0) {
-							System.out.print(div + " ");
+						int div=2;
+						while(div<no) {
+							if(no%div==0) {
+								System.out.print(div + " ");
+							}
+							div=div+1;
 						}
-						div=div+1;
-					}
-					System.out.println();
+						System.out.println();
 					
 				}
 				private void sum_of_first_n_numbers() {
-					int sum=0;
-					int no=1;
-					while(no<=10) {
-						sum=sum+no;
-						no=no+1;
-					}
-					System.out.println(sum);
+						int sum=0;
+						int no=1;
+						while(no<=10) {
+							sum=sum+no;
+							no=no+1;
+						}
+						System.out.println(sum);
 				}
 				private void multiples3OR5() {
-					int no=3;
-					while(no<=30) 
-					{
-						if(no%3==0 || no%5==0){
-							System.out.print(no + " ");
+						int no=3;
+						while(no<=30) 
+						{
+							if(no%3==0 || no%5==0){
+								System.out.print(no + " ");
+							}
+							no=no+1;
 						}
-						no=no+1;
-					}
-					System.out.println();
+						System.out.println();
 				}
 				private void multiples3AND5() {
 					    int no=3;
