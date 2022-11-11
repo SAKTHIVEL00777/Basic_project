@@ -14,7 +14,7 @@ public class Loop {
 			//loop.multiples3OR5();
 			//loop.sum_of_first_n_numbers();
 			//loop.find_divisors(100);  //divide of 100
-			//loop.count_of_divisors(100);  //count of 100/
+			//loop.count_of_divisors(100);  //count of 100
 			//loop.primeOrNot(14);   
 			//loop.reverseOrder(5674);
 			//loop. noOfReverseNumber();
@@ -42,9 +42,87 @@ public class Loop {
 			//loop.perfectNumber();
 		    // loop.spyNumber();
 			//loop.powerOfNumber(2,5);
-			loop.binaryToDecimal();
+			//loop.binaryToDecimal();
+			//loop.decimalToBinary(7);
+			//loop.swappingNo();
+			//loop.swappingNoWithoutThirdVariable();
+			//loop.fibonaci(25);
+			//loop.findLCM();
+			 loop.singleDigit(99);
 			}
 		
+			private void singleDigit(int no) {
+					int sum=0;
+					while(0<no) {
+						int rem=no%10;
+						sum=sum+rem;
+						no=no/10;
+					}
+					if(sum>9) {
+						singleDigit(sum);
+					}
+					else {
+						System.out.println(sum);
+					}
+		}
+
+			private void findLCM() {
+			        int no1=3;
+			        int no2=6;
+			        int max=no1>no2?no1:no2;
+			        while(true) {
+			        	if(max%no1==0 && max%no2==0) {
+			        		System.out.println(max);
+				        	break;
+			        	}
+                           max=max+1;
+			        	
+			        }
+
+		}
+
+			private void fibonaci(int no) {
+				int first=0;
+				int second=1;
+				int third=0;
+				while(first<no) {
+					System.out.print(first+ " ");
+					third=first+second; 
+					first=second;
+					second=third;
+				}
+						
+		}
+
+			private void swappingNoWithoutThirdVariable() {
+					int no1=25;
+					int no2=32;
+					no1=no1+no2;
+					no2=no1-no2;
+					no1=no1-no2;
+					System.out.println(no1+ "-----"+no2);
+		}
+
+			private void swappingNo() {
+					int no1=27;
+					int no2=37;
+					int add=no1+no2;
+					no2=add-no2;
+					no1=add-no1;
+					System.out.println(no1+ "-------- "+no2);
+		}
+
+			private void decimalToBinary(int no) {
+					String binary="";
+					while(0<no) {
+						int rem=no%2;
+						binary=rem+binary;
+						no=no/2;
+					}
+					System.out.println(binary);
+						
+		}
+
 			private void binaryToDecimal() {
 			        int binary=111;
 			        int power=0;
@@ -502,4 +580,3 @@ public class Loop {
 					   System.out.println();
 					}
 	}
-
