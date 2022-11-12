@@ -4,7 +4,7 @@ public class Loop {
 	
 		public static void main(String args[]) {
 			
-			//System.out.println("WHILE LOOP PROGRAMS");
+			System.out.println("WHILE LOOP PROGRAMS");
 			
 			Loop loop=new Loop();
 			
@@ -40,7 +40,7 @@ public class Loop {
 		   	//loop.greatestDivisor();
 			//loop.samePowerOfNumber();
 			//loop.perfectNumber();
-		    // loop.spyNumber();
+		    //loop.spyNumber();
 			//loop.powerOfNumber(2,5);
 			//loop.binaryToDecimal();
 			//loop.decimalToBinary(7);
@@ -48,7 +48,7 @@ public class Loop {
 			//loop.swappingNoWithoutThirdVariable();
 			//loop.fibonaci(25);
 			//loop.findLCM();
-			 loop.singleDigit(99);
+			// loop.singleDigit(99);
 			}
 		
 			private void singleDigit(int no) {
