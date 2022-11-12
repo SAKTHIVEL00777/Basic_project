@@ -49,8 +49,14 @@ public class Loop {
 			//loop.fibonaci(25);
 			//loop.findLCM();
 			// loop.singleDigit(99);
+			//loop.printNoSeries();
 			}
 		
+			/*
+			 * private void printNoSeries() { int no1=10; int no2=8; while(no2>=0) {
+			 * System.out.println(no1+ " "); no1=no1+no2; no2=no2-2; } }
+			 */
+
 			private void singleDigit(int no) {
 					int sum=0;
 					while(0<no) {
@@ -568,6 +574,7 @@ public class Loop {
 							start=start+1;
 						}
 						System.out.println();
+						
 					}
 				 private void printOne() {
 						

@@ -5,7 +5,7 @@ public class LoopingTask {
 	public static void main(String[] args) {
 		LoopingTask task=new LoopingTask();
 		task.First_N_primeNo();
-		System.out.println("-----------");
+		//System.out.println("-----------");
 		task.First_N_DoubleDigit();
 	}
 
@@ -28,7 +28,7 @@ public class LoopingTask {
 			if(count==0) {
 				
 				if(div>9) {
-					System.out.println(div + " ");
+					System.out.print(div + " ");
 				}
 				primeCount=primeCount+1;
 			}
@@ -53,12 +53,13 @@ public class LoopingTask {
 					div=div+1;
 				}
 				if(count==0) {
-					System.out.println(div + " ");
+					System.out.print(div + " ");
 					primeCount=primeCount+1;
 					
 				}
 				   no=no+1;
 			}
+			System.out.println();
 	}
 
 }
