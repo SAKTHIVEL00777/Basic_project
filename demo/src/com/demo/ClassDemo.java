@@ -2,7 +2,7 @@ package com.demo;
 
 public class ClassDemo implements InterDemo{
 	ClassDemo(){
-		
+		System.out.println("ClassDemo Constructor");
 	}
 ClassDemo(int a){
 		
