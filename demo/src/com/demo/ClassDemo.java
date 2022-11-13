@@ -4,9 +4,9 @@ public class ClassDemo implements InterDemo{
 	ClassDemo(){
 		System.out.println("ClassDemo Constructor");
 	}
-ClassDemo(int a){
+//ClassDemo(int a){
 		
-	}
+	//}
 
 	public static void main(String[] args) {
 		InterDemo cd=new ClassDemo();
